@@ -14,14 +14,14 @@ body{
 .main-container{
     display: flex;
     margin: 20px  auto;
-    width: 70%;
+    width: 60%;
     height: calc(100% - 40px);
 }
 
 
 .contact-list{
    
-    width: 30%;
+    width: 40%;
     
 }
 
@@ -43,11 +43,11 @@ body{
     border-right: 1px solid #d6d6d6;
     justify-content: space-between;
 }
-.user{
+.user , .contact{
     display: flex;
     
 }
-.user img{
+.user img , .contact img{
     height: 50px;
     width: 50px;
     border-radius: 100%;
@@ -55,14 +55,10 @@ body{
     
 
 
-.user p , .user-icon {
+.user p   , .user-icon   {
     line-height: 50px;
     
 }
-
-
-
-
 
 .user-icon i{
     color:#b1b1b1 ;
@@ -135,7 +131,7 @@ body{
     background-color: #e9ebeb;
     opacity: 1;
 }
-.contact-list-info{
+.contact-list-info , .contact-text{
     margin-left: 15px;
 }
 .contact-list-info small ,.time small{
@@ -145,46 +141,75 @@ body{
     margin-left: 135px;
 
 }
+
+
+
+
 /* RIGHT COL */
 
 .contact-info{
     background-color: #eaeaea;
-    height: 60px;
+    width: 100%;
+    display: flex;
+    padding:  5px 10px;
+    justify-content: space-between;
+    
+}
+.contact-text small{
+    color: gray;
 }
 .message-area{
     flex-grow: 1;
 }
 
 .sent{
-    width: 100%;
-    margin-top: 50px;
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column;
-}
-.message-sent{
+    width: 20%;
+    margin-top: 25px;
     background-color: #d5f9ba;
     margin-right: 100px;
     margin-bottom: 10px;
+    margin-left: auto;
+    border-radius: 10px;
+    padding: 10px;
+}
+.message-sent{
+    
 }
 
 .receive{
-    width: 100%;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-}
-    
-.message-receive{
+    width: 20%;
+    padding: 10px;
+    border-radius: 10px;
     background-color: #ffffff;
     margin-left: 100px;
     margin-bottom: 10px;
+    
+}
+    
+.message-receive{
+    
 }
 .type-message-bar{
     background-color: #eaeaea;
-    height: 60px;
-    
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
 }
+.input-bar{
+    width: 100%;
+}
+.input-bar input{
+    padding:10px ;
+    border-radius: 5px;
+    outline: none;
+    border-style: none;
+    width: 100%;
+}
+.emote ,  .input-mic{
+    padding: 10px 20px;
+    color: #6b7376;
+}
+
 
 
    
