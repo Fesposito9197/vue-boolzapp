@@ -120,7 +120,8 @@ body{
     display: flex;
     flex-direction: column;
     background-color: #fff;
-    height: calc(100% - 180px);
+    height: calc(100% - 187px);
+    overflow-y: auto;
 }
 
 
