@@ -19,7 +19,7 @@ body{
 
 
 .contact-list{
-    background-color: #fff;
+   
     width: 30%;
     
 }
@@ -28,6 +28,8 @@ body{
 .contact-message{
     background-color: chartreuse;
     width: 70%;
+    display: flex;
+    flex-direction: column;
 
 }
 /* LEFT COL */
@@ -36,6 +38,7 @@ body{
     background-color: #eaeaea;
     width: 100%;
     height:60px;
+    border-right: 1px solid;
 }
 
 .notification{
@@ -44,15 +47,69 @@ body{
     height:60px;
 }
 .search-contact{
-    background-color: #fff;
+    background-color: #ffffff;
     width: 100%;
     height:60px;
+}
+.contact-chat-list{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    height: calc(100% - 180px);
 }
 .contact-chat{
     background-color: blue;
     width: 100%;
     height: 80px;
+    
     border: 1px solid black;
+}
+
+/* RIGHT COL */
+
+.contact-info{
+    background-color: #eaeaea;
+    height: 60px;
+}
+.message-area{
+    flex-grow: 1;
+    
+}
+
+.sent{
+    
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+
+    
+}
+.message-sent{
+    background-color: #d5f9ba;
+    margin-right: 100px;
+    margin-bottom: 10px;
+}
+
+.receive{
+    width: 100%;
+    
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+
+    
+}
+.message-receive{
+    background-color: #ffffff;
+    margin-left: 100px;
+    margin-bottom: 10px;
+}
+.type-message-bar{
+    background-color: #eaeaea;
+    height: 60px;
+    
 }
 
 
