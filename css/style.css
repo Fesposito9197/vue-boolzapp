@@ -5,7 +5,7 @@
 }
 /*  MAIN   */
 body{
-    background-color:beige;
+    background-image: linear-gradient( to bottom, #009688 ,#d6dbd7);
     height: 100vh;
     display: flex;
     font-family: 'Lato', sans-serif;
@@ -172,9 +172,7 @@ body{
     border-radius: 10px;
     padding: 10px;
 }
-.message-sent{
-    
-}
+
 
 .receive{
     width: 20%;
@@ -186,9 +184,7 @@ body{
     
 }
     
-.message-receive{
-    
-}
+
 .type-message-bar{
     background-color: #eaeaea;
     padding: 10px;
