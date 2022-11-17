@@ -8,6 +8,7 @@ body{
     background-color:beige;
     height: 100vh;
     display: flex;
+    font-family: 'Lato', sans-serif;
 }
 
 .main-container{
@@ -37,19 +38,83 @@ body{
 .user-info{
     background-color: #eaeaea;
     width: 100%;
-    height:60px;
-    border-right: 1px solid;
+    display: flex;
+    padding:  5px 10px;
+    border-right: 1px solid #d6d6d6;
+    justify-content: space-between;
 }
+.user{
+    display: flex;
+    
+}
+.user img{
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+}
+    
+
+
+.user p , .user-icon {
+    line-height: 50px;
+    
+}
+
+
+
+
+
+.user-icon i{
+    color:#b1b1b1 ;
+    margin-right: 10px;
+}
+
 
 .notification{
     background-color: #8edafc;
     width: 100%;
-    height:60px;
+    display: flex;
+    padding: 20px;
 }
+
+.notification i {
+    text-align: center;
+    color: #8edafc;
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+    line-height: 40px;
+    border-radius: 100%;
+    background-color:#ffffff ;
+}
+
+.text-notification p:last-child{
+    text-decoration: underline;
+    color: grey;
+    cursor: pointer;
+}
+
 .search-contact{
-    background-color: #ffffff;
+    background-color: #fafafa;
     width: 100%;
-    height:60px;
+    padding: 10px;
+    display: flex;
+    
+}
+.search-contact input{
+    width: 100%;
+    padding: 5px;
+    outline: none;
+    border-style: none;
+    border: 1px solid #fafafa;
+}
+.search-contact button{
+    background-color: #ffffff;
+    border-style: none;
+    color: #b6b9bb;
+    cursor: pointer;
+    border: 1px solid #fafafa;
+    padding: 5px 20px;
 }
 .contact-chat-list{
     display: flex;
@@ -57,14 +122,25 @@ body{
     background-color: #fff;
     height: calc(100% - 180px);
 }
-.contact-chat{
-    background-color: blue;
-    width: 100%;
-    height: 80px;
-    
-    border: 1px solid black;
-}
 
+
+.contact-chat{
+    
+    width: 100%;
+    padding: 10px;
+    border-bottom: 2px solid #fafafa;
+    display: flex;
+}
+.contact-chat.active{
+    background-color: #e9ebeb;
+    opacity: 1;
+}
+.contact-list-info{
+    margin-left: 15px;
+}
+.contact-list-info small{
+    color: #bbb9c0;
+}
 /* RIGHT COL */
 
 .contact-info{
@@ -73,18 +149,14 @@ body{
 }
 .message-area{
     flex-grow: 1;
-    
 }
 
 .sent{
-    
     width: 100%;
     margin-top: 50px;
     display: flex;
     align-items: flex-end;
     flex-direction: column;
-
-    
 }
 .message-sent{
     background-color: #d5f9ba;
@@ -94,13 +166,11 @@ body{
 
 .receive{
     width: 100%;
-    
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-
-    
 }
+    
 .message-receive{
     background-color: #ffffff;
     margin-left: 100px;
