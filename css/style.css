@@ -117,8 +117,7 @@ body{
     padding: 5px 20px;
 }
 .contact-chat-list{
-    display: flex;
-    flex-direction: column;
+   
     background-color: #fff;
     height: calc(100% - 187px);
     overflow-y: auto;
@@ -139,8 +138,12 @@ body{
 .contact-list-info{
     margin-left: 15px;
 }
-.contact-list-info small{
+.contact-list-info small ,.time small{
     color: #bbb9c0;
+}
+.time{
+    margin-left: 135px;
+
 }
 /* RIGHT COL */
 
