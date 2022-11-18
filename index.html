@@ -51,10 +51,10 @@
                             </div>
                             <div class="contact-list-info">
                                 <p>{{contact.name}}</p>
-                                <small>Ultimo messaggio inviato</small>
+                                <small>{{contact.messages[contact.messages.length-1].message}}</small>
                             </div>
                             <div class="time">
-                                <small>12:00</small>
+                                <small>{{contact.messages[contact.messages.length-1].date}}</small>
                             </div>
                         </div>
                     </div>
@@ -93,7 +93,7 @@
                             <i class="fa-regular fa-face-smile"></i>
                         </div>
                         <div class="input-bar">
-                            <input type="text"  placeholder="Scrivi un messaggio" @keyup.enter="addingNewMessage" v-model="newMessage" required>
+                            <input type="text"  placeholder="Scrivi un messaggio" @keyup.enter="addingNewMessage" v-model="newMessage">
                         </div>
                         <div class="input-mic">
                             <i class="fa-solid fa-microphone"></i>

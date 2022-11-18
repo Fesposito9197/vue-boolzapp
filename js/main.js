@@ -6,6 +6,7 @@ createApp({
             newMessage:"",
             searchName: '',
             activeContact: 0,
+            messageCounter:0,
             contacts: [
                 {
                     name: 'Michele',
@@ -184,16 +185,19 @@ createApp({
                 message:this.newMessage,
                 status: 'sent'
             }
-            this.contacts[this.activeContact].messages.push(objmessage)
-            this.newMessage=''
-            setTimeout(()=>{
-                const cpuAnswer = {
-                    date: moment().format('LT'),
-                    message:'ok',
-                    status:'received'
-                }
-                this.contacts[this.activeContact].messages.push(cpuAnswer)
-            }, 1000)
+            if (this.newMessage !=="" ) {
+                this.contacts[this.activeContact].messages.push(objmessage)
+                this.newMessage=''
+                setTimeout(()=>{
+                    const cpuAnswer = {
+                        date: moment().format('LT'),
+                        message:'ok',
+                        status:'received'
+                    }
+                    this.contacts[this.activeContact].messages.push(cpuAnswer)
+                }, 1000)
+                
+            }
         },
         filterList (contact){
             if (this.searchName == '') {
