@@ -181,7 +181,7 @@ createApp({
         addingNewMessage(){
             
             const  objmessage = {
-                date:   moment().format('DD/MM/YYYY hh:mm'),
+                date:   moment().format(),
                 message:this.newMessage,
                 status: 'sent'
             }
@@ -190,7 +190,7 @@ createApp({
                 this.newMessage=''
                 setTimeout(()=>{
                     const cpuAnswer = {
-                        date: moment().format('LT'),
+                        date: moment().format(),
                         message:'ok',
                         status:'received'
                     }
@@ -209,8 +209,6 @@ createApp({
        deletMessage(i){
             this.contacts[this.activeContact].messages.splice(i,1)
        },
-       messageTime(){
-            this.contacts[this.messages].date
-       }
+       
     }
 }).mount('#app')
