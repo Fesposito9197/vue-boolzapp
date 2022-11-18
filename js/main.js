@@ -181,7 +181,7 @@ createApp({
         addingNewMessage(){
             
             const  objmessage = {
-                date:   moment().format('LT'),
+                date:   moment().format('DD/MM/YYYY hh:mm'),
                 message:this.newMessage,
                 status: 'sent'
             }
