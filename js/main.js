@@ -180,7 +180,7 @@ createApp({
         addingNewMessage(){
             
             const  objmessage = {
-                date:  '',
+                date:   moment().format('LT'),
                 message:this.newMessage,
                 status: 'sent'
             }
@@ -188,7 +188,7 @@ createApp({
             this.newMessage=''
             setTimeout(()=>{
                 const cpuAnswer = {
-                    date:"",
+                    date: moment().format('LT'),
                     message:'ok',
                     status:'received'
                 }
@@ -202,9 +202,6 @@ createApp({
             return contact.name.toLowerCase().startsWith(this.searchName.toLowerCase())
             
         },
-        messageDate(date){
-            return moment(date).format('LT'); ;
-        },
-        
+       
     }
 }).mount('#app')

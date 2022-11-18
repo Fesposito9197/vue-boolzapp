@@ -67,6 +67,7 @@ body{
 .user-icon i{
     color:#b1b1b1 ;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 
