@@ -31,8 +31,8 @@ body{
 
 
 .contact-message{
-    background-color: chartreuse;
-    width: 70%;
+    
+    width: 60%;
     display: flex;
     flex-direction: column;
 
@@ -128,8 +128,11 @@ body{
     cursor: pointer;
     width: 100%;
     padding: 10px;
-    border-bottom: 2px solid #fafafa;
+    
     display: flex;
+}
+.contact-chat:not(:last-child){
+    border-bottom: 2px solid #fafafa;
 }
 .contact-chat.active{
     background-color: #e9ebeb;
@@ -165,6 +168,7 @@ body{
 .message-area{
     flex-grow: 1;
     background-image:url(../img/mine.jpg) ;
+    overflow-y: auto;
 }
 
 .sent{
@@ -177,7 +181,6 @@ body{
     border-radius: 10px;
     padding: 10px;
 }
-
 
 .received{
     width: 25%;

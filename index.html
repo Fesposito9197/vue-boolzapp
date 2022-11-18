@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="https://momentjs.com/downloads/moment.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
@@ -39,11 +40,11 @@
                         <button type="submit">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
-                        <input type="text" name="" id="" placeholder="Cerca o inizia una nuova chat">
+                        <input type="text" name="" id="" placeholder="Cerca o inizia una nuova chat" v-model="searchName" >
                         
                     </div>
                     <div class="contact-chat-list">
-                        <div class="contact-chat " :class="(activeContact===index) ? 'active' : ''" v-for="(contact , index) in contacts" @click="changeContact(index)">
+                        <div class="contact-chat " :class="(activeContact===index) ? 'active' : ''" v-show="filterList(contact)" v-for="(contact , index) in contacts" @click="changeContact(index)">
                             <div class="user">
                                 <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name">
                                 
@@ -81,7 +82,7 @@
                     <div class="message-area" >
                         <div :class="message.status" v-for="(message , index) in contacts[activeContact].messages">
                             {{message.message}}
-                           
+                           <div class="message-time">{{messageDate(message.date)}}</div>
                         </div>
                         
                         
@@ -92,7 +93,7 @@
                             <i class="fa-regular fa-face-smile"></i>
                         </div>
                         <div class="input-bar">
-                            <input type="text" name="" id="" placeholder="Scrivi un messaggio">
+                            <input type="text"  placeholder="Scrivi un messaggio" @keyup.enter="addingNewMessage" v-model="newMessage" required>
                         </div>
                         <div class="input-mic">
                             <i class="fa-solid fa-microphone"></i>

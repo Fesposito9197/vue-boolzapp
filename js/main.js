@@ -3,7 +3,8 @@ const { createApp } = Vue
 createApp({
   data() {
         return {
-
+            newMessage:"",
+            searchName: '',
             activeContact: 0,
             contacts: [
                 {
@@ -175,6 +176,35 @@ createApp({
     methods:{
         changeContact(i){
             this.activeContact = i
-        }
+        },
+        addingNewMessage(){
+            
+            const  objmessage = {
+                date:  '',
+                message:this.newMessage,
+                status: 'sent'
+            }
+            this.contacts[this.activeContact].messages.push(objmessage)
+            this.newMessage=''
+            setTimeout(()=>{
+                const cpuAnswer = {
+                    date:"",
+                    message:'ok',
+                    status:'received'
+                }
+                this.contacts[this.activeContact].messages.push(cpuAnswer)
+            }, 1000)
+        },
+        filterList (contact){
+            if (this.searchName == '') {
+                return true
+            }
+            return contact.name.toLowerCase().startsWith(this.searchName.toLowerCase())
+            
+        },
+        messageDate(date){
+            return moment(date).format('LT'); ;
+        },
+        
     }
 }).mount('#app')
