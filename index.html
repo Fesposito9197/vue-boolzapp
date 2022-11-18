@@ -54,7 +54,7 @@
                                 <small>{{contact.messages[contact.messages.length-1].message}}</small>
                             </div>
                             <div class="time">
-                                <small>12:00</small>
+                                <small>{{contact.messages[contact.messages.length-1].date.substring(10)}}</small>
                             </div>
                         </div>
                     </div>
@@ -82,7 +82,7 @@
                     <div class="message-area" >
                         <div :class="message.status" v-for="(message , index) in contacts[activeContact].messages">
                             {{message.message}}
-                           <div class="message-time">{{message.date}}</div>
+                           <div class="message-time">{{message.date.substring(10)}}</div>
                            <div class="dropdown-content">
                                <a href="#" @click="deletMessage(index)">Cancella messaggio</a>
                             </div>

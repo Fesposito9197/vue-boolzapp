@@ -208,6 +208,9 @@ createApp({
         },
        deletMessage(i){
             this.contacts[this.activeContact].messages.splice(i,1)
+       },
+       messageTime(){
+            this.contacts[this.messages].date
        }
     }
 }).mount('#app')
