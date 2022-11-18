@@ -206,6 +206,8 @@ createApp({
             return contact.name.toLowerCase().startsWith(this.searchName.toLowerCase())
             
         },
-       
+       deletMessage(i){
+            this.contacts[this.activeContact].messages.splice(i,1)
+       }
     }
 }).mount('#app')
