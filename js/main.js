@@ -6,7 +6,7 @@ createApp({
             newMessage:"",
             searchName: '',
             activeContact: 0,
-            messageCounter:0,
+            
             contacts: [
                 {
                     name: 'Michele',
@@ -206,9 +206,11 @@ createApp({
             return contact.name.toLowerCase().startsWith(this.searchName.toLowerCase())
             
         },
-       deletMessage(i){
+        deleteMessage(i){
             this.contacts[this.activeContact].messages.splice(i,1)
-       },
+            console.log(i)
+
+        },
        
     }
 }).mount('#app')
