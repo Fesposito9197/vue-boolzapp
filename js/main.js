@@ -213,8 +213,11 @@ createApp({
         
         numberRandom(min, max) {
             return Math.floor(Math.random() * (max - min) ) + min;
-        }   
-              
+        },   
+        scrollBottom(){
+            const chat = document.querySelector('.message-area')
+            chat.scrollTop = chat.scrollHeight
+        }
         
        
     },
@@ -228,5 +231,8 @@ createApp({
             
             
         }
+    },
+    updated(){
+        this.scrollBottom()
     }
 }).mount('#app')
