@@ -6,7 +6,7 @@ createApp({
             newMessage:"",
             searchName: '',
             activeContact: 0,
-            
+            chuck:[],
             contacts: [
                 {
                     name: 'Michele',
@@ -191,7 +191,7 @@ createApp({
                 setTimeout(()=>{
                     const cpuAnswer = {
                         date: moment().format(),
-                        message:'ok',
+                        message:this.chuck[this.numberRandom(0,this.chuck.length)],
                         status:'received'
                     }
                     this.contacts[this.activeContact].messages.push(cpuAnswer)
@@ -208,9 +208,25 @@ createApp({
         },
         deleteMessage(i){
             this.contacts[this.activeContact].messages.splice(i,1)
-            console.log(i)
-
+            
         },
+        
+        numberRandom(min, max) {
+            return Math.floor(Math.random() * (max - min) ) + min;
+        }   
+              
+        
        
+    },
+    created (){
+        for (let i = 0; i <= 20; i++) {
+            axios.get('https://api.chucknorris.io/jokes/random')
+            .then((Response) =>{
+                this.chuck.push(Response.data.value)
+                console.log(this.chuck)
+            })
+            
+            
+        }
     }
 }).mount('#app')
