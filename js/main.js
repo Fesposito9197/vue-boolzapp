@@ -223,7 +223,7 @@ createApp({
             axios.get('https://api.chucknorris.io/jokes/random')
             .then((Response) =>{
                 this.chuck.push(Response.data.value)
-                console.log(this.chuck)
+                
             })
             
             
